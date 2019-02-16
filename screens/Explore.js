@@ -15,6 +15,7 @@ import {
 
 import Icon from 'react-native-vector-icons/Ionicons';
 import Category from './components/Explore/category';
+import Home from './components/Explore/Home'
 import { Status } from 'expo-background-fetch';
 import { white } from 'ansi-colors';
 
@@ -77,14 +78,18 @@ class Explore extends Component {
     </Icon>
     </View>
     </View>
+
+
     <ScrollView
     scrollEventThrottle = {16}
     >
+
     <View style = {{
         flex: 1,
         backgroundColor: 'white', 
         paddingTop: 20,
     }}>
+
     <Text
     style = {{
         fontSize: 24, 
@@ -93,10 +98,14 @@ class Explore extends Component {
     }}>
     What can we help you find, Amer?
     </Text>
+
+
     <View style = {{
         height : 130,
         marginTop: 20
     }}> 
+
+
     <ScrollView
     horizontal = {true}
     showsHorizontalScrollIndicator = {false}
@@ -154,6 +163,53 @@ class Explore extends Component {
     source = {require ('../assets/images/home.jpg')}
     />
     </View>
+    </View>
+    </View>
+
+    <View style = {{
+        marginTop:40
+    }}>
+     <Text style = {{
+         fontSize: 24,
+         fontWeight: '700',
+         paddingHorizontal: 20
+     }}>
+     Homes around the world
+     </Text>
+     <View style = {{
+        paddingHorizontal: 20, 
+        marginTop: 20,
+        flexDirection: 'row',
+        flexWrap: 'wrap', 
+        justifyContent: 'space-between'
+     }}>
+     
+     <Home 
+     width = {width}
+     imageUri = {require('../assets/images/home.jpg')}
+     title = 'PRIVATE ROOM - 2 BEDS'
+     summary = 'The Cosy Palace'
+     price = '$ 82'
+     rating = {5}
+     />
+
+     <Home 
+     width = {width}
+     imageUri = {require('../assets/images/home.jpg')}
+     title = 'PRIVATE ROOM - 2 BEDS'
+     summary = 'The Cosy Palace'
+     price = '$ 82'
+     rating = {3}
+     />
+
+     <Home 
+     width = {width}
+     imageUri = {require('../assets/images/home.jpg')}
+     title = 'PRIVATE ROOM - 2 BEDS'
+     summary = 'The Cosy Palace'
+     price = '$ 82'
+     rating = {4}
+     />
     </View>
     </View>
     </ScrollView>

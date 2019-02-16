@@ -6,18 +6,7 @@ import Explore from './screens/Explore';
 import Inbox from './screens/Inbox';
 import Saved from './screens/Saved';
 import Trips from './screens/Trips';
-
-class App extends React.Component {
- 
-
-  render(){
-    return (
-      <View style = {styles.container}>
-            <Text>Open up App.js to start working on your app!</Text>
-      </View>
-    );
-  }
-}
+import Profile from './screens/Profile';
 
 
 export default createBottomTabNavigator({
@@ -58,6 +47,28 @@ export default createBottomTabNavigator({
       tabBarIcon: ({tintColor}) => (
         <Icon name = 'ios-chatboxes' color = {tintColor} size ={24}/> 
       )
+    }
+  },
+  Profile: { 
+    screen: Profile,
+    navigationOptions: {
+      tabBarLabel: 'Profile', 
+      tabBarIcon: ({tintColor}) => (
+        <Icon name = 'ios-person' color = {tintColor} size ={24}/> 
+      )
+    }
+  }
+}, {
+  tabBarOption:{
+    activeTintColor: 'red',
+    inactiveTintColor: 'grey',
+    style: {
+      backgroundColor: 'white',
+      borderTopWidth: 0, 
+      shadowOffset: {width: 5, width: 3},
+      shadowColor:'black',
+      shadowOpacity: 0.5,
+      elevation: 5
     }
   }
 })

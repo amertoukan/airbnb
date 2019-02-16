@@ -4,7 +4,7 @@ import {
     View, Text, StyleSheet
 } from 'react-native'; 
 
-class Inbox extends Component { 
+class Profile extends Component { 
     render(){ 
         return ( 
         <View style  = {styles.container}> 
@@ -22,4 +22,4 @@ const styles = StyleSheet.create ({
         justifyContent: 'center'
     }
 })
-export default Inbox;
+export default Profile;
